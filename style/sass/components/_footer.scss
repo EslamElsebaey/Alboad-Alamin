@@ -1,0 +1,349 @@
+
+footer{
+    padding: 80px 0 45px 0;
+    a:hover{
+        text-decoration: none;
+    }
+    .footer-title{
+        margin: 0;
+        font-size: 14px;
+        color: #000;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+    }
+}
+.footer-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+
+.img-item{
+    text-align: center;
+}
+// .logo-info {
+//     img {
+//         width: 215px;
+//         max-width: 100%;
+//     }
+// }
+.logo-text {
+    h3{
+        font-size: 14px;
+        margin: 0;
+        margin-top: 20px;
+        width: 329px;
+        line-height: 28px;
+        color: $main-color;
+        font-weight: 300;
+    }
+}
+.payment-maroof-sec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0 25px 0;
+    // a:last-child{
+    //     width: 65px;
+    //     img{
+    //         width: 100%;
+    //     }
+    // }
+    a:last-child{
+        margin-inline-start: 12px;
+    }
+}
+
+
+.quick-links {
+ul li {
+    line-height: 29px;
+   a{
+    font-size: 14px;
+    font-weight: 400;
+    color: #808080;
+    text-transform: capitalize;
+    transition: all linear .2s;
+    &:hover{
+        color: #ba2b2d;
+    }
+    &:focus{
+        text-decoration: none;
+    }
+    &:active{
+        text-decoration: none;
+    }
+   }
+}
+}
+.newsletter{
+    .newsletter-text{
+        font-size: 14px;
+        color: #000;
+        font-weight: 400;
+        margin: 0;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        
+    }
+}
+
+.message {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    .subscribe {
+        min-width: 87px;
+        max-width: 105px;
+        height: 32px;
+        background-image: linear-gradient(90deg, #0badc5 0%, #135d77 100%);
+        padding: 0 15px;
+        position: relative;
+        border-radius: 16px;
+        font-size: 12px;
+        color: #ffffff;
+        font-weight: 700;
+        position: absolute;
+        inset-inline-end: 5px;
+        transform:   translateY(-50%);
+        top: 50%;
+        // overflow: hidden;
+        transition: all linear .3s;
+        &:hover{
+            background-image:linear-gradient(90deg, #eb7a2e 0%, #b92b2d 100%);;
+        }
+    }
+    input{
+        width: 360px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: #f2f2f2;
+        transition: all linear .2s;
+        max-width: 100%;
+        outline: none ;
+        border: 1px solid transparent;
+        color: #a6a6a6;
+        padding-inline-start: 20px;
+        padding-inline-end: 105px;
+        font-size: 16px;
+        font-weight: 400;
+        &::-webkit-input-placeholder{
+            font-size: 12px;
+            color: #8e8e8e;
+        }
+        &:focus{
+            border-color: #135d77 ;
+        }
+    }
+   
+}
+
+
+.tasawk{
+    margin: 0;
+.text{
+    font-size: 12px;
+    color: #808080;
+}
+text-transform: capitalize;
+display: flex;
+align-items: center;
+a{
+    margin-inline-start: 6px;
+}
+}
+
+.copyright{
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .copyText{
+        font-size: 12px;
+        color: #808080;
+        font-weight: 400;
+        margin: 0;
+    }
+}
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+        .icon {
+            font-size: 18px;
+            color: #808080;
+            transition: all linear .2s;
+        }
+        // margin-inline-end: 30px;
+        margin-inline-end: 20px;
+        transition: all linear .2s;
+        &:hover{
+            .icon{
+                color: #ba2b2d;
+            }
+           
+        }
+    }
+    a:last-of-type{
+        margin-inline-end: 0;
+    }
+  
+}
+
+
+
+@include min-768 {
+    .img-item{
+        transform: translateY(-29px);
+    }
+}
+
+
+@include max-992 {
+    .social{
+        justify-content: center;
+    }
+   
+}
+
+@media screen and (min-width : 768px) and (max-width : 992px) {
+    .newsletter-item{
+        margin-top: 30px;
+    }
+}
+
+
+
+
+@include max-768 {
+    .quick-links ul li{
+        line-height: 32px;
+    }
+    .copyright .copyText{
+        order: 2;
+        margin: 5px 0;
+    }
+    .social-footer{
+        margin-bottom: 20px;
+    }
+    .footer-items{
+        flex-direction: column;
+        .img-item{
+            order: 6;
+            margin: 30px auto 0 auto;
+        }
+        .footer-item{
+            width: 100%;
+        }
+    }
+    .newsletter .newsletter-text{
+        text-align: center;
+    }
+   
+    .quick-links{
+        width: 100%;
+    }
+    .footer-row{
+        display: flex;
+        flex-direction: column;
+    }
+    .quick-drop{
+        height: auto;
+    }
+    .contact , .newsletter  , .quick-links {
+        padding-bottom: 25px;
+        ul li:first-child , .nested{
+            padding-top: 10px;
+        }
+    }
+    .quick-links ul li:first-child{
+        padding-top: 5px;
+    }
+    .contact ul li{
+        margin-bottom: 12px;
+    }
+    footer{
+        padding: 40px 0 30px 0;
+    }
+    .quick-drop , .contact ul , .newsletter .nested{
+        display: none;
+    }
+    .copyright{
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        .payments{
+            margin-bottom: 10px;
+        }
+    }
+  
+   
+    .message{
+        width: 100%;
+        input{
+            width: 100%;
+             &::placeholder{
+                 font-size: 13px;
+             }
+         }
+    }
+     
+   
+    .quick-links ul li{
+        font-size: 14px;
+    }
+    .contact ul li a{
+        font-size: 14px;
+    }
+    .newsletter p{
+        font-size: 14px;
+    }
+    .tasawk{
+        justify-content: center;
+        order: 3;
+        line-height: 25px;
+        font-size: 13px;
+        width: 100%;
+    }
+    footer .footer-title{
+        margin-bottom: 0;
+        position: relative;
+        &::after {
+            font-size: 15px;
+            content: "\f107";
+            transition: all linear .3s;
+            font-family: "line Awesome free";
+            position: absolute;
+            inset-inline-end: 0;
+            top: 0;
+        }
+    }
+  
+    .logo-info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo-text h3{
+        text-align: center;
+        width: auto;
+    }
+    .payment-maroof-sec{
+        justify-content: center;
+    }
+    .arrow-rotate::after {
+        transform: rotate(180deg)  ;
+    }
+    .rotate-icon-special::after {
+        transform: rotate(180deg);
+    }
+}
+
+
+
+
