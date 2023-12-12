@@ -1868,6 +1868,7 @@ footer .footer-title {
   max-width: 100%;
 }
 .message .subscribe {
+  text-transform: capitalize;
   min-width: 87px;
   max-width: 105px;
   height: 32px;
