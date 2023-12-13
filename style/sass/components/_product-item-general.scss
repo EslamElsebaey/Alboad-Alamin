@@ -151,7 +151,7 @@ background-image: linear-gradient(90deg, #73cd5b 0%, #419b28 100%);
     // -webkit-transition: background-image 0.2s ease-in-out;
     // transition: background-image 0.2s ease-in-out;
     &:hover{
-        background-image: linear-gradient(90deg, #eb7a2e 0%, #b92b2d 100%);
+        // background-image: linear-gradient(90deg, #eb7a2e 0%, #b92b2d 100%);
         .addtoCart-text{
             color: #fff;
         }
@@ -167,6 +167,9 @@ background-image: linear-gradient(90deg, #73cd5b 0%, #419b28 100%);
         display: inline-block;
         text-align: center;
     }
+}
+.add.linear::after{
+    border-radius: 18px;
 }
 .showMore-sec{
     text-align: center;
@@ -232,7 +235,9 @@ background-image: linear-gradient(90deg, #73cd5b 0%, #419b28 100%);
     }
     .item-desc .brand-name{
         font-size: 14px;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
+        -webkit-line-clamp: 2;
+        height: 40px;
     }
 }
 

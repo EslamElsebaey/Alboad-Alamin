@@ -235,6 +235,10 @@ img {
   z-index: 8;
 }
 
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 2px);
+}
+
 .swiper-pagination-bullet-active {
   background-color: #ba2b2d;
 }
@@ -304,8 +308,8 @@ img {
     bottom: 80px;
   }
   .totop-whatsapp-holder {
-    bottom: 15px;
-    right: 15px;
+    bottom: 10px;
+    right: 10px;
   }
 }
 header {
@@ -567,6 +571,10 @@ nav .closeBtn {
   color: #01dafb;
 }
 
+html[dir=ltr] .nav-ul > li {
+  margin-inline-end: 17px;
+}
+
 .bars, .open-search-btn {
   display: none;
   border: none;
@@ -720,11 +728,11 @@ nav .closeBtn {
     padding: 8px 0;
   }
   .nav-ul li .nav-ancor {
-    color: #135d77;
+    color: #000;
     font-weight: 400;
   }
   .nav-ul li .nav-ancor:hover {
-    color: #ba2b2d;
+    color: #000;
   }
   .mynav {
     margin-top: 50px;
@@ -877,7 +885,7 @@ nav .closeBtn {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
 }
 .li-drop > a::after {
   content: "\f107";
@@ -885,34 +893,31 @@ nav .closeBtn {
   font-weight: 900;
   font-size: 10px;
   position: relative;
-  margin-inline-start: 3px;
-}
-.li-drop:hover .ul-drop {
-  opacity: 1;
-  visibility: visible;
+  margin-inline-start: 2px;
 }
 .li-drop .ul-drop {
-  transition: all linear 0.3s;
+  transition: all linear 0.2s;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   position: absolute;
-  top: 100%;
+  top: 45px;
   z-index: 11;
   opacity: 0;
   visibility: hidden;
-  min-width: 140px;
+  min-width: 160px;
   border-radius: 7px;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  padding: 10px;
+  padding: 15px 10px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(25px);
 }
 .li-drop .ul-drop li {
   text-align: center;
   transition: all linear 0.3s;
   margin-bottom: 10px;
+  line-height: 2;
 }
 .li-drop .ul-drop li:last-of-type {
   margin-bottom: 0;
@@ -925,12 +930,18 @@ nav .closeBtn {
   display: block;
   font-weight: 400;
   transition: all linear 0.2s;
-  line-height: 1.55;
 }
 .li-drop .ul-drop a:hover {
   color: #ba2b2d;
 }
 
+@media only screen and (min-width: 992px) {
+  .li-drop:hover .ul-drop {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+}
 @media only screen and (max-width: 767px) {
   .li-drop .ul-drop li a:hover {
     background-color: transparent;
@@ -979,7 +990,7 @@ nav .closeBtn {
     transform: none;
   }
   .li-drop .ul-drop li a {
-    color: #135d77;
+    color: #000;
     text-align: start;
     font-size: 14px;
   }
@@ -1140,7 +1151,7 @@ nav .closeBtn {
 @media only screen and (max-width: 767px) {
   .categories-parent {
     grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
+    gap: 10px;
   }
   .category-item span {
     font-size: 15px;
@@ -1299,9 +1310,6 @@ nav .closeBtn {
   text-transform: capitalize;
   margin: auto;
 }
-.add:hover {
-  background-image: linear-gradient(90deg, #eb7a2e 0%, #b92b2d 100%);
-}
 .add:hover .addtoCart-text {
   color: #fff;
 }
@@ -1315,6 +1323,10 @@ nav .closeBtn {
   color: #ffffff;
   display: inline-block;
   text-align: center;
+}
+
+.add.linear::after {
+  border-radius: 18px;
 }
 
 .showMore-sec {
@@ -1378,7 +1390,9 @@ nav .closeBtn {
   }
   .item-desc .brand-name {
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    -webkit-line-clamp: 2;
+    height: 40px;
   }
 }
 @media screen and (max-width: 370px) {
@@ -1459,9 +1473,6 @@ nav .closeBtn {
   font-size: 14px;
   color: #ffffff;
   font-weight: 700;
-}
-.offer-desc .shopNow:hover {
-  background-image: linear-gradient(90deg, #eb7a2e 0%, #b92b2d 100%);
 }
 
 @keyframes shine {
@@ -1742,8 +1753,8 @@ html[dir=ltr] .review-text {
     bottom: 70px;
   }
   .brands .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
   }
   .brands {
     padding: 50px 0;
@@ -1885,8 +1896,8 @@ footer .footer-title {
   top: 50%;
   transition: all linear 0.3s;
 }
-.message .subscribe:hover {
-  background-image: linear-gradient(90deg, #eb7a2e 0%, #b92b2d 100%);
+.message .subscribe.linear::after {
+  border-radius: 16px;
 }
 .message input {
   width: 360px;
@@ -2093,4 +2104,21 @@ footer .footer-title {
   .rotate-icon-special::after {
     transform: rotate(180deg);
   }
+}
+.linear {
+  position: relative;
+  z-index: 1;
+}
+.linear::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(90deg, #eb7a2e 0%, #b92b2d 100%);
+  opacity: 0;
+  z-index: -1;
+  transition: all linear 0.3s;
+  border-radius: 20px;
+}
+.linear:hover::after {
+  opacity: 1;
 }/*# sourceMappingURL=main.css.map */
