@@ -551,7 +551,7 @@ nav .closeBtn {
 .nav-ul {
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
@@ -572,7 +572,10 @@ nav .closeBtn {
 }
 
 html[dir=ltr] .nav-ul > li {
-  margin-inline-end: 17px;
+  margin-inline-end: 18px;
+}
+html[dir=ltr] .nav-ul li:last-child {
+  margin: 0;
 }
 
 .bars, .open-search-btn {
@@ -840,6 +843,7 @@ html[dir=ltr] .nav-ul > li {
   nav .nav-ul {
     display: flex;
     flex-direction: column;
+    justify-content: unset;
     align-items: flex-start;
   }
   .control {

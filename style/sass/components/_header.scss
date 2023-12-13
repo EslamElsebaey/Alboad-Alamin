@@ -268,7 +268,7 @@ transition: all linear .2s;
 .nav-ul{
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     li:last-child{
@@ -290,7 +290,10 @@ transition: all linear .2s;
 
 html[dir="ltr"]{
     .nav-ul > li{
-        margin-inline-end: 17px;
+        margin-inline-end: 18px;
+    }
+    .nav-ul li:last-child{
+        margin: 0;
     }
 }
 
@@ -631,6 +634,7 @@ html[dir="ltr"]{
         .nav-ul{
             display: flex;
             flex-direction: column;
+            justify-content: unset;
             align-items: flex-start;
         }
         
